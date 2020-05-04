@@ -31,7 +31,7 @@ VOLUME $STEAMAPPDIR
 # 2. Start server
 ENTRYPOINT ${STEAMCMDDIR}/steamcmd.sh \
 		+login anonymous +force_install_dir ${STEAMAPPDIR} +app_update ${STEAMAPPID} +quit \
-		&& ${STEAMAPPDIR}/SquadGameServer.sh \
+		&& ${STEAMAPPDIR}/PostScriptumServer.sh \
 			Port=$PORT QueryPort=$QUERYPORT RCONPORT=$RCONPORT FIXEDMAXPLAYERS=$FIXEDMAXPLAYERS RANDOM=$RANDOM
 
 # Expose ports
